@@ -1,0 +1,17 @@
+version: '3'
+services:
+  sp:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app  
+    command: python sp_app.py
+    
+  idp:
+    build: .
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/app
+    command: python idp_app.py
