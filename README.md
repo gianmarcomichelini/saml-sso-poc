@@ -1,10 +1,10 @@
-# 🔐 SAML 2.0 Web Browser SSO - Proof of Concept
+# SAML 2.0 Web Browser SSO - Proof of Concept
 
 > A cybersecurity student implementation demonstrating **Delegated Authentication** using the SAML 2.0 Web Browser SSO Profile
 
 ---
 
-## 📖 Overview
+## Overview
 
 This project implements the **SAML 2.0 Web Browser SSO Profile** using Python, Flask, and `pysaml2`, orchestrated with Docker. It demonstrates the **Push Model** where the Identity Provider "pushes" authentication assertions to the Service Provider.
 
@@ -12,7 +12,7 @@ Built as part of the "Electronic Identity" lecture of the "Advanced Information 
 
 ---
 
-## 🎯 Key Concepts
+## Key Concepts
 
 ### Delegated Authentication
 The Service Provider (SP) delegates user authentication to a trusted Identity Provider (IdP) rather than handling credentials directly.
@@ -29,7 +29,7 @@ Established through X.509 certificate exchange and metadata, ensuring message au
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────┐         ┌──────────────────┐         ┌─────────────────┐
@@ -50,22 +50,7 @@ Established through X.509 certificate exchange and metadata, ensuring message au
 
 ---
 
-## 📁 Project Structure
-
-```
-saml-docker-poc/
-├── 📜 certs/                  # X.509 certificates
-├── 🐍 sp_app.py               # Service Provider implementation
-├── 🐍 idp_app.py              # Identity Provider implementation
-├── 🐍 create_metadata.py      # SAML metadata generator
-├── 🐳 docker-compose.yml     
-├── 🐳 Dockerfile             
-└── 📋 requirements.txt      
-```
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -125,7 +110,7 @@ docker-compose up
 
 ---
 
-## 🔒 Security Features
+## Security Features
 
 This implementation includes security controls aligned with SAML 2.0 best practices:
 
@@ -140,7 +125,7 @@ This implementation includes security controls aligned with SAML 2.0 best practi
 
 ---
 
-## 🛡️ Educational Context
+## Educational Context
 
 This project was developed as part of a cybersecurity curriculum to demonstrate:
 
@@ -149,15 +134,3 @@ This project was developed as part of a cybersecurity curriculum to demonstrate:
 - Trust establishment in distributed systems
 - Secure authentication delegation patterns
 - XML signature verification
-
----
-
-## 📚 Technologies Used
-
-- **Python 3.9+** - Core language
-- **Flask** - Web framework for SP and IdP
-- **pysaml2** - SAML 2.0 implementation library
-- **xmlsec1** - XML digital signature processing
-- **Docker** - Containerization and orchestration
-- **OpenSSL** - Certificate generation
-
